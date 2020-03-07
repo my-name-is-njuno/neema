@@ -8,6 +8,14 @@ $(function () {
 
 $(function () {
 
+    $("#preloader").animate({
+        'opacity': '0'
+    }, 600, function () {
+        setTimeout(function () {
+            $("#preloader").css("visibility", "hidden").fadeOut();
+        }, 500);
+    });
+
     if ($('.owl-trusted').length) {
         $('.owl-trusted').owlCarousel({
             loop: true,
@@ -80,3 +88,4 @@ $(function () {
      
 
 });
+
